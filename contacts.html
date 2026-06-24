@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Контакты — Сыйна Учёт Профи</title>
+<meta name="description" content="Свяжитесь с нами для бесплатной консультации. Бишкек, Кыргызстан.">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header class="site">
+  <div class="nav">
+    <a href="index.html" class="logo">Сыйна <span>УЧЁТ ПРОФИ</span></a>
+    <nav class="links">
+      <a href="index.html">Главная</a>
+      <a href="services.html">Услуги</a>
+      <a href="about.html">О компании</a>
+      <a href="contacts.html" class="active">Контакты</a>
+    </nav>
+    <a href="contacts.html" class="nav-cta">Заказать консультацию</a>
+  </div>
+</header>
+
+<section class="hero" style="padding-bottom:56px;">
+  <div class="wrap">
+    <span class="kicker">Контакты</span>
+    <h1 style="font-size:clamp(28px,4vw,44px);">Первая консультация — бесплатно</h1>
+    <p class="lead">Опишите задачу — ответим в течение рабочего дня и предложим оптимальный формат сотрудничества.</p>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:64px;align-items:start;">
+
+      <!-- FORM -->
+      <div>
+        <span class="eyebrow">Написать нам</span>
+        <h2 style="font-size:22px;margin-bottom:28px;">Заявка на консультацию</h2>
+
+        <form action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
+          <div class="form-group">
+            <label for="name">Ваше имя</label>
+            <input type="text" id="name" name="name" placeholder="Айгуль Бекова" required>
+          </div>
+          <div class="form-group">
+            <label for="phone">Телефон</label>
+            <input type="tel" id="phone" name="phone" placeholder="+996 700 000 000">
+          </div>
+          <div class="form-group">
+            <label for="email">Электронная почта</label>
+            <input type="email" id="email" name="email" placeholder="example@mail.com" required>
+          </div>
+          <div class="form-group">
+            <label for="service">Интересующая услуга</label>
+            <select id="service" name="service">
+              <option value="" disabled selected>Выберите услугу</option>
+              <option>Бухгалтерское обслуживание</option>
+              <option>Аудит финансовой отчётности</option>
+              <option>Налоговое консультирование</option>
+              <option>Восстановление учёта</option>
+              <option>Кадровый учёт и зарплата</option>
+              <option>Отчётность для НКО / грантов</option>
+              <option>Не определился — нужна консультация</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="message">Коротко о задаче</label>
+            <textarea id="message" name="message" placeholder="Например: ИП на общем режиме, 3 сотрудника, нужно наладить учёт с нуля..."></textarea>
+          </div>
+          <button type="submit" class="btn">Отправить заявку</button>
+          <p style="color:var(--slate);font-size:12px;margin-top:14px;font-family:'Courier New',monospace;letter-spacing:.04em;">Ответим в течение рабочего дня</p>
+        </form>
+      </div>
+
+      <!-- INFO -->
+      <div>
+        <span class="eyebrow">Реквизиты</span>
+        <h2 style="font-size:22px;margin-bottom:28px;">Как с нами связаться</h2>
+
+        <div class="info-block" style="margin-bottom:24px;">
+          <div class="info-row">
+            <div class="info-row-label">Телефон</div>
+            <a href="tel:+996700000000">+996 700 000 000</a>
+          </div>
+          <div class="info-row">
+            <div class="info-row-label">Email</div>
+            <a href="mailto:info@syinagulaccounting.kg">info@syinagulaccounting.kg</a>
+          </div>
+          <div class="info-row">
+            <div class="info-row-label">Адрес</div>
+            <span>г. Бишкек, Кыргызская Республика</span>
+          </div>
+          <div class="info-row">
+            <div class="info-row-label">Режим работы</div>
+            <span>Пн – Пт, 9:00 – 18:00</span>
+          </div>
+        </div>
+
+        <div style="background:#fff;border:1px solid var(--line);padding:24px 24px;margin-bottom:20px;">
+          <span class="eyebrow">Реквизиты компании</span>
+          <p style="color:var(--body);font-size:15px;margin-bottom:4px;">ОсОО «Сыйна Учёт Профи»</p>
+          <p style="color:var(--slate);font-size:14px;">Кыргызская Республика, г. Бишкек</p>
+        </div>
+
+        <div style="padding:20px 24px;border:1px solid rgba(160,120,40,.3);border-radius:var(--radius);background:var(--goldBg);">
+          <p style="color:var(--gold);font-family:'Courier New',monospace;font-size:11px;letter-spacing:.08em;margin-bottom:6px;">ПЕРВАЯ КОНСУЛЬТАЦИЯ</p>
+          <p style="color:var(--body);font-size:15px;">Бесплатно. Без обязательств. Просто расскажите о задаче — разберёмся вместе.</p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<footer class="site">
+  <div class="wrap">
+    <div class="footer-grid">
+      <div>
+        <div class="logo" style="margin-bottom:14px;">Сыйна <span>УЧЁТ ПРОФИ</span></div>
+        <p style="font-size:14px;max-width:280px;">Бухгалтерские и аудиторские услуги для бизнеса в Кыргызстане.</p>
+      </div>
+      <div>
+        <h4>Навигация</h4>
+        <a href="index.html">Главная</a>
+        <a href="services.html">Услуги</a>
+        <a href="about.html">О компании</a>
+        <a href="contacts.html">Контакты</a>
+      </div>
+      <div>
+        <h4>Контакты</h4>
+        <a href="tel:+996700000000">+996 700 000 000</a>
+        <a href="mailto:info@syinagulaccounting.kg">info@syinagulaccounting.kg</a>
+        <span style="color:#5a5c56;font-size:14px;">г. Бишкек</span>
+      </div>
+      <div>
+        <h4>Реквизиты</h4>
+        <span style="color:#5a5c56;font-size:14px;">ОсОО «Сыйна Учёт Профи»</span>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2026 ОсОО «Сыйна Учёт Профи»</span>
+      <span>Бишкек, Кыргызская Республика</span>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>
