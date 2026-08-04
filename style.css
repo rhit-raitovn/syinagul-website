@@ -1,16 +1,16 @@
 /* ─── TOKENS ─────────────────────────────────────────────── */
 :root {
-  --ink:     #1a1c18;
-  --body:    #3a3d36;
+  --ink:     #090a08;   /* darker than #1a1c18 */
+  --body:    #2d2f2a;   /* darker */
   --paper:   #f7f5f0;
   --panel:   #eeecea;
   --panel2:  #e6e3dc;
   --line:    #d8d4cc;
-  --slate:   #7a7870;
-  --mist:    #5a5850;
-  --gold:    #a07828;
-  --gold2:   #c49a3c;
-  --goldBg:  #fdf8ee;
+  --slate:   #55544d;   /* was #7a7870 */
+  --mist:    #3e3d37;   /* was #5a5850 */
+  --gold:    #a87000;
+  --gold2:   #7d5607;
+  --goldBg:  #f2d9a7;
   --radius:  4px;
 }
 
@@ -19,10 +19,11 @@
 html { scroll-behavior: smooth; }
 
 body {
-  font-family: 'Georgia', 'Times New Roman', serif;
+  font-family: "Baskerville", "Palatino Linotype", serif;
   background: var(--paper);
   color: var(--ink);
-  line-height: 1.65;
+  font-size: 19px;   /* was 17px */
+  line-height: 1.75;
   -webkit-font-smoothing: antialiased;
 }
 
@@ -31,29 +32,40 @@ a { color: inherit; text-decoration: none; }
 
 /* ─── TYPOGRAPHY ─────────────────────────────────────────── */
 .mono {
-  font-family: 'Courier New', Courier, monospace;
+  font-family: "Consolas", monospace;
   letter-spacing: .06em;
-  font-size: 12px;
+  font-size: 14px;
   text-transform: uppercase;
 }
 
 .kicker {
-  display: inline-block;
-  font-family: 'Courier New', monospace;
-  font-size: 11px;
-  letter-spacing: .14em;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 14px;
+  width: fit-content;
+  margin: 0 auto 24px;   /* Centers it horizontally */
+
+  font-family: "Consolas", monospace;
+  font-weight: bold;
+  font-size: 22px;
+  letter-spacing: .22em;
   text-transform: uppercase;
   color: var(--gold);
-  border: 1px solid var(--gold);
-  padding: 3px 10px;
-  border-radius: 2px;
-  margin-bottom: 20px;
+}
+
+.kicker::before,
+.kicker::after {
+  content: "";
+  width: 45px;
+  height: 1px;
+  background: var(--gold);
 }
 
 .eyebrow {
   display: block;
-  font-family: 'Courier New', monospace;
-  font-size: 11px;
+  font-family: "Consolas", monospace;
+  font-size: 13px;
   letter-spacing: .14em;
   text-transform: uppercase;
   color: var(--slate);
@@ -63,10 +75,10 @@ a { color: inherit; text-decoration: none; }
 h1 { font-size: clamp(32px, 5vw, 56px); font-weight: 400; line-height: 1.15; letter-spacing: -.02em; color: var(--ink); }
 h2 { font-size: clamp(24px, 3.5vw, 38px); font-weight: 400; line-height: 1.2; letter-spacing: -.01em; color: var(--ink); }
 h3 { font-size: 20px; font-weight: 400; color: var(--ink); }
-h4 { font-family: 'Courier New', monospace; font-size: 11px; letter-spacing: .1em; text-transform: uppercase; color: var(--slate); margin-bottom: 14px; }
+h4 { font-family: "Consolas", monospace; font-size: 11px; letter-spacing: .1em; text-transform: uppercase; color: var(--slate); margin-bottom: 14px; }
 
 .lead {
-  font-size: 18px;
+  font-size: 22px;
   color: var(--mist);
   max-width: 580px;
   margin-top: 18px;
@@ -103,8 +115,8 @@ header.site {
 }
 
 .logo {
-  font-family: 'Courier New', monospace;
-  font-size: 14px;
+  font-family: "Consolas";
+  font-size: 17px bold;
   letter-spacing: .08em;
   text-transform: uppercase;
   color: var(--ink);
@@ -120,8 +132,8 @@ header.site {
 }
 
 .links a {
-  font-family: 'Courier New', monospace;
-  font-size: 12px;
+  font-family: "Consolas", monospace;
+  font-size: 17px;
   letter-spacing: .08em;
   text-transform: uppercase;
   color: var(--slate);
@@ -130,7 +142,7 @@ header.site {
 .links a:hover, .links a.active { color: var(--ink); }
 
 .nav-cta {
-  font-family: 'Courier New', monospace;
+  font-family: "Consolas", monospace;
   font-size: 11px;
   letter-spacing: .1em;
   text-transform: uppercase;
@@ -163,7 +175,7 @@ header.site {
 /* ─── BUTTONS ────────────────────────────────────────────── */
 .btn {
   display: inline-block;
-  font-family: 'Courier New', monospace;
+  font-family: "Consolas", monospace;
   font-size: 12px;
   letter-spacing: .1em;
   text-transform: uppercase;
@@ -187,39 +199,50 @@ header.site {
 
 .btn-ghost {
   display: inline-block;
-  font-family: 'Courier New', monospace;
-  font-size: 12px;
+  font-family: "Consolas", monospace;
+  font-size: 14px;
   letter-spacing: .1em;
   text-transform: uppercase;
   background: transparent;
   color: var(--ink);
   padding: 12px 28px;
   border-radius: var(--radius);
-  border: 1px solid var(--line);
+  border: 2px solid var(--line);
   cursor: pointer;
   transition: border-color .2s, color .2s;
 }
 .btn-ghost:hover { border-color: var(--ink); }
 
 /* ─── LEDGER ─────────────────────────────────────────────── */
-.ledger {}
 .ledger-row {
-  display: flex;
-  align-items: baseline;
-  gap: 8px;
-  padding: 18px 0;
+  display: grid;
+  grid-template-columns: 1fr auto;
+  align-items: center;
+  padding: 16px 0;
   border-bottom: 1px solid var(--line);
 }
-.ledger-row:first-child { border-top: 1px solid var(--line); }
-.ledger-row .label { font-family: 'Courier New', monospace; font-size: 13px; color: var(--slate); letter-spacing: .04em; }
-.ledger-row .dots { flex: 1; border-bottom: 1px dotted var(--line); margin: 0 8px 4px; }
-.ledger-row .value { font-size: 28px; color: var(--ink); letter-spacing: -.01em; line-height: 1; }
-.ledger-row .value sup { font-size: 14px; }
+
+.ledger-row .label {
+  font-family: "Consolas", monospace;
+  font-size: 13px;
+  letter-spacing: .1em;
+  text-transform: uppercase;
+  color: var(--slate);
+}
+
+.ledger-row .dots {
+  display: none;
+}
+
+.ledger-row .value {
+  font-size: 28px;
+  color: var(--gold);
+}
 
 /* ─── SECTION HEAD ───────────────────────────────────────── */
 .section-head { margin-bottom: 48px; max-width: 600px; }
 .section-head h2 { margin: 10px 0 14px; }
-.section-head p { color: var(--mist); font-size: 16px; }
+.section-head p { color: var(--mist); font-size: 17px; }
 
 /* ─── GRIDS ──────────────────────────────────────────────── */
 .grid-3 {
@@ -247,14 +270,14 @@ header.site {
 
 .card .num {
   display: block;
-  font-family: 'Courier New', monospace;
+  font-family: "Consolas", monospace;
   font-size: 11px;
   letter-spacing: .1em;
   color: var(--gold);
   margin-bottom: 14px;
 }
-.card h3 { font-size: 17px; margin-bottom: 10px; }
-.card p { color: var(--slate); font-size: 14px; line-height: 1.6; }
+.card h3 { font-size: 19px; margin-bottom: 10px; }
+.card p { color: var(--slate); font-size: 17px; line-height: 1.65; }
 
 /* ─── SERVICES LEDGER (detail list) ─────────────────────── */
 .svc-ledger > div:last-child { border-bottom: none !important; }
@@ -283,7 +306,7 @@ header.site {
 }
 
 .stat-label {
-  font-family: 'Courier New', monospace;
+  font-family: "Consolas", monospace;
   font-size: 11px;
   letter-spacing: .08em;
   text-transform: uppercase;
@@ -296,7 +319,7 @@ header.site {
 
 .form-group label {
   display: block;
-  font-family: 'Courier New', monospace;
+  font-family: "Consolas", monospace;
   font-size: 11px;
   letter-spacing: .1em;
   text-transform: uppercase;
@@ -312,7 +335,7 @@ header.site {
   border: 1px solid var(--line);
   color: var(--ink);
   padding: 12px 16px;
-  font-family: 'Georgia', serif;
+  font-family: 'Baskerville', serif;
   font-size: 15px;
   border-radius: var(--radius);
   outline: none;
@@ -337,15 +360,15 @@ header.site {
 }
 .info-row:last-child { border-bottom: none; }
 .info-row-label {
-  font-family: 'Courier New', monospace;
-  font-size: 10px;
+  font-family: "Consolas", monospace;
+  font-size: 11px;
   letter-spacing: .12em;
   text-transform: uppercase;
   color: var(--slate);
   margin-bottom: 5px;
 }
 .info-row a, .info-row span {
-  font-size: 16px;
+  font-size: 17px;
   color: var(--ink);
   transition: color .2s;
 }
@@ -373,7 +396,7 @@ header.site {
   padding: 14px 0;
   border-bottom: 1px solid var(--line);
   color: var(--body);
-  font-size: 15px;
+  font-size: 18px;
   display: flex;
   align-items: center;
   gap: 12px;
@@ -382,7 +405,7 @@ header.site {
 .cert-list li::before {
   content: '—';
   color: var(--gold);
-  font-family: 'Courier New', monospace;
+  font-family: "Consolas", monospace;
   flex-shrink: 0;
 }
 
@@ -420,7 +443,7 @@ footer.site .logo span { color: var(--gold2); }
   display: flex;
   justify-content: space-between;
   padding-top: 24px;
-  font-family: 'Courier New', monospace;
+  font-family: "Consolas", monospace;
   font-size: 11px;
   letter-spacing: .06em;
   color: #4a4c46;
